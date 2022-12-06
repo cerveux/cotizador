@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm/LoginForm";
 
 function Login() {
 
-    const login = JSON.parse(window.localStorage.getItem("login"))
+    const login = JSON.parse(window.localStorage.getItem("login")) || false;
     if (login.logged) {
         window.location.replace("/configuracion");
     }

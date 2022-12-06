@@ -4,7 +4,7 @@ import "./Configuracion.css"
 
 function Configuracion() {
 
-    const login = JSON.parse(window.localStorage.getItem("login"))
+    const login = JSON.parse(window.localStorage.getItem("login")) || false;
     if (login.logged) {
         return (
             <>
@@ -161,7 +161,7 @@ function Configuracion() {
 
                                             <div className="col-12 col-sm-6 col-md-5 col-lg-4 col-xl-3">
                                                 <div className="boton-prueba d-grid gap-2" >
-                                                    <button type="button" className="btn  inter">Actualizar Valores</button>
+                                                    <button type="button" className="btn btn-primary  inter">Actualizar Valores</button>
                                                 </div>
                                             </div>
                                         </div>
