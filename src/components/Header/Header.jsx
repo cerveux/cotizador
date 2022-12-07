@@ -12,7 +12,7 @@ function Header() {
     /* const [pais, setPais] = BoolHook(true);
     const { paises } = opcionesApp();
     const [activa, setActiva] = useState(0) */
-    const login = JSON.parse(window.localStorage.getItem("login")).logged || false;
+    const login = JSON.parse(window.localStorage.getItem("login")) || false;
 
     const [isOpenError, openModalError] = BoolHook(false); //Hook que maneja la muesta y la desaparicion del modal
 
@@ -81,7 +81,7 @@ function Header() {
                                 <Link className="nav-link inter"
 
                                 
-                                style={ {pointerEvents: !login &&  "none"}}
+                                style={ {pointerEvents: !login.logged &&  "none"}}
                                 onClick={logOut} to="/">Log Out</Link>
                                 <Link className="nav-link active inter" to="/configuracion">Configuración</Link>
                             </div>
