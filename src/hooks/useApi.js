@@ -6,8 +6,7 @@ import bcrypt from "bcryptjs-react"
 
 export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
   const [valores, setValores] = useState(null);
-  /* const someOtherPlaintextPassword = 'C8-64-FT-MERN';
-  const saltRounds = 10; */
+  const [dataBase, setDataBase] = useState(null);
 
 
   /* https://c8-64-ft-mern-production.up.railway.app/api/login?user=admin&password=admin */
@@ -17,7 +16,6 @@ export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
     
 
     axios.get(`${url}content/${initialValue}`).then((resp) => {
-      // Se obtiene la data y se carga al estado al key correspondiente
       setValores({
             shablon: [(resp.data.shablon_nuevo + resp.data.shablon_bajada + resp.data.shablon_grabado), (resp.data.shablon_usado + resp.data.shablon_borrado + resp.data.shablon_bajada + resp.data.shablon_grabado)],
             rendimiento: [[resp.data.logo_claro, resp.data.central_claro, resp.data.full_claro], [resp.data.logo_oscuro, resp.data.central_oscuro, resp.data.full_oscuro]],
@@ -59,6 +57,30 @@ export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
     })
   }
 
-  return [valores, fetchValores, login];
+
+
+
+
+  const leerBD = () => {
+    axios.get(`${url}content/${initialValue}`).then((resp) => {
+      console.log("entro");
+      setDataBase(resp.data);
+    }).catch(err => console.log(err));
+  };
+
+  const postDB = (newValue)=>{
+
+    console.log(newValue); 
+
+    axios.patch("https://c8-64-ft-mern-production.up.railway.app/api/updateBase/638407eb2aac88001c4e0ceb", newValue)
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  return [valores, fetchValores, login, leerBD, postDB, dataBase, setDataBase];
 }
 

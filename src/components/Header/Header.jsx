@@ -81,7 +81,7 @@ function Header() {
                                 <Link className="nav-link inter"
 
                                 
-                                style={ {pointerEvents: !login.logged &&  "none"}}
+                                style={ {display: !login.logged &&  "none"}}
                                 onClick={logOut} to="/">Log Out</Link>
                                 <Link className="nav-link active inter" to="/configuracion">Configuración</Link>
                             </div>
