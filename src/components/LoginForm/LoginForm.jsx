@@ -57,8 +57,7 @@ function LoginForm() {
                                                         <button className="btn btn-dark btn-lg btn-block form-control" type="submit" style={{ backgroundColor: "#e1a325", borderColor: "#e1a325" }}>Login</button>
                                                     </div>
 
-                                                    <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>Don't have an account? <a href="#!"
-                                                        style={{ color: "#393f81" }}>Contact Us</a></p>
+                                                    <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>Don't have an account? <Link to={"/team"} className="">Contact Us</Link></p>
 
                                                 </div>
 

@@ -26,22 +26,14 @@ import dyp from "../assets/d&p.png";
 
 export function opcionesApp() {
   const paises = [
-    {bandera: argentina,
-    texto: "Argentina"},
-    {bandera: bolivia,
-    texto: "Bolivia"},
-    {bandera: brazil,
-    texto: "Brazil"},
-    {bandera: chile,
-    texto: "Chile"},
-    {bandera: paraguay,
-    texto: "Paraguay"},
-    {bandera: spain,
-    texto: "España"},
-    {bandera: unitedS,
-    texto: "United States"},
-    {bandera: uruguay,
-    texto: "Uruguay"},
+    { bandera: argentina, texto: "Argentina" },
+    { bandera: bolivia, texto: "Bolivia" },
+    { bandera: brazil, texto: "Brazil" },
+    { bandera: chile, texto: "Chile" },
+    { bandera: paraguay, texto: "Paraguay" },
+    { bandera: spain, texto: "España" },
+    { bandera: unitedS, texto: "United States" },
+    { bandera: uruguay, texto: "Uruguay" },
   ];
 
   const logosFondo = [
@@ -65,7 +57,18 @@ export function opcionesApp() {
     { logo: dyp, texto: "Dorado y Plateado" },
   ];
 
-  const opcionesCotizar = [{name: "shablones", texto: "¿Se usarán shablones usados?"}, {name: "cotizacion", texto: "¿Conversión de U$D a ARS?"}]
+  const opcionesCotizar = [
+    { name: "shablones", texto: "¿Se usarán shablones usados?" },
+    { name: "cotizacion", texto: "¿Conversión de U$D a ARS?" },
+  ];
 
-  return { paises, logosFondo, logosEstampado, logosPintura, opcionesCotizar };
+ 
+
+  return {
+    paises,
+    logosFondo,
+    logosEstampado,
+    logosPintura,
+    opcionesCotizar,
+  };
 }
