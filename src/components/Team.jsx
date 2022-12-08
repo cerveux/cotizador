@@ -22,9 +22,8 @@ function Team() {
                         <h5 className="card-title nombre">Facundo Cali</h5>
                         <p className="card-text funcion">Back-End</p>
                         <ul className="list-group list-group-flush">
-                            {/* <li class="list-group-item"><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/diego-guzm%C3%A1n-cerveux/">LinkedIn</a></li> */}
+                            <li class="list-group-item prueba-card"><a className="prueba-card" target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/facundo-cali-903b61210">LinkedIn</a></li>
                             <li className="list-group-item prueba-card"><a className="prueba-card" target="_blank" rel="noreferrer" href="https://github.com/Facundo-cali">GitHub</a></li>
-                            {/* <li class="list-group-item"><a target="_blank" rel="noreferrer" href="https://cerveux.vercel.app/">Portfolio</a></li> */}
                         </ul>
                     </div>
                 </div>
