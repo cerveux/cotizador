@@ -9,20 +9,20 @@ import spain from "../assets/flags/spain.png";
 import unitedS from "../assets/flags/united-states.png";
 import uruguay from "../assets/flags/uruguay.png";
 
-import claro from "../assets/base.jpg";
-import oscuro from "../assets/oscuro.jpg";
+import claro from "../assets/base.png";
+import oscuro from "../assets/oscuro.png";
 
-import central from "../assets/central.jpg";
-import logo from "../assets/logo.jpg";
-import full from "../assets/full.jpg";
+import central from "../assets/central.png";
+import logo from "../assets/Logo.png";
+import full from "../assets/full.png";
 
-import agua from "../assets/PAG.jpg";
-import plastisol from "../assets/Plastisol.jpg";
-import relieve from "../assets/relieve.jpg";
-import foil from "../assets/foil.jpg";
-import glitter from "../assets/glittr.jpg";
-import corrocion from "../assets/corrosion.jpg";
-import dyp from "../assets/d&p.jpg";
+import agua from "../assets/PAG.png";
+import plastisol from "../assets/Plastisol.png";
+import relieve from "../assets/relieve.png";
+import foil from "../assets/foil.png";
+import glitter from "../assets/Glittr.png";
+import corrocion from "../assets/corrosion.png";
+import dyp from "../assets/d&p.png";
 
 export function opcionesApp() {
   const paises = [

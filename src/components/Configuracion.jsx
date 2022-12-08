@@ -2,7 +2,7 @@ import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import "./Configuracion.css"
 import { useApi } from "../hooks/useApi";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { BoolHook } from "../hooks/BoolHook";
 import Modal from "./Modal/Modal";
 
