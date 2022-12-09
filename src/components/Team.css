@@ -19,9 +19,13 @@
 
 .team-card{
     margin: 0px 15px 15px;
-    height: 550px;
+    height: 530px;
     background-color: #b6b1b2;
     border: 2px solid #e1a325;
+}
+
+.card-foto{
+    border-bottom: 2px solid #e1a325;
 }
 
 .prueba-card{
@@ -36,4 +40,10 @@
 
 .funcion{
     font-weight: 600;
+}
+
+.icono{
+    width: 22px;
+    margin-top: 2px;
+    margin-right: 8px;
 }
