@@ -11,7 +11,7 @@ import { useState } from "react";
 import { BoolHook } from "../hooks/BoolHook.js";
 import { useApi } from "../hooks/useApi";
 import Footer from "../components/Footer/Footer";
-
+ 
 function Calculadora() {
   const [valores, setValores] = useApi();               //hook que se conecta al backend para devolver los precios de cada cosa
   const [resultados, setResultados] = BoolHook(false); //hook que controla que se muestro u oculten los resultados

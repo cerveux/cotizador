@@ -5,24 +5,30 @@ import bcrypt from "bcryptjs-react"
 
 
 export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
-  const [valores, setValores] = useState(null);
+  const [valores, setValores] = useState({
+    shablon: [(23), (22)],
+    rendimiento: [[900, 250, 40], [700, 190, 33]],
+    colores: [[2.85, 8.15, 13.35, 11, 14, 0, 25], [8.25, 8.15, 13.35, 11, 14, 12, 25]],
+    static: true
+});
   const [dataBase, setDataBase] = useState(null);
 
 
   /* https://c8-64-ft-mern-production.up.railway.app/api/login?user=admin&password=admin */
   const url = `https://c8-64-ft-mern-production.up.railway.app/api/`;
 
-  const fetchValores = () => {
-    
+    const fetchValores = () => {
+      
 
-    axios.get(`${url}content/${initialValue}`).then((resp) => {
-      setValores({
-            shablon: [(resp.data.shablon_nuevo + resp.data.shablon_bajada + resp.data.shablon_grabado), (resp.data.shablon_usado + resp.data.shablon_borrado + resp.data.shablon_bajada + resp.data.shablon_grabado)],
-            rendimiento: [[resp.data.logo_claro, resp.data.central_claro, resp.data.full_claro], [resp.data.logo_oscuro, resp.data.central_oscuro, resp.data.full_oscuro]],
-            colores: [[resp.data.agua_fc, resp.data.plastisol, resp.data.relieve, resp.data.foil, resp.data.glitter, 0, resp.data.dyp], [resp.data.agua_fo, resp.data.plastisol, resp.data.relieve, resp.data.foil, resp.data.glitter, resp.data.corrosion, resp.data.dyp]]
-      });
-    }).catch(err => console.log(err));
-  };
+      axios.get(`${url}content/${initialValue}`).then((resp) => {
+        console.log("holo");
+        setValores({
+              shablon: [(resp.data.shablon_nuevo + resp.data.shablon_bajada + resp.data.shablon_grabado), (resp.data.shablon_usado + resp.data.shablon_borrado + resp.data.shablon_bajada + resp.data.shablon_grabado)],
+              rendimiento: [[resp.data.logo_claro, resp.data.central_claro, resp.data.full_claro], [resp.data.logo_oscuro, resp.data.central_oscuro, resp.data.full_oscuro]],
+              colores: [[resp.data.agua_fc, resp.data.plastisol, resp.data.relieve, resp.data.foil, resp.data.glitter, 0, resp.data.dyp], [resp.data.agua_fo, resp.data.plastisol, resp.data.relieve, resp.data.foil, resp.data.glitter, resp.data.corrosion, resp.data.dyp]]
+        });
+      }).catch(err => console.error(err));
+    };
 
   const login = (user, pass, openLoginError)=>{
     
