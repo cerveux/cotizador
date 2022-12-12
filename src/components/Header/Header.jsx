@@ -1,5 +1,5 @@
 import "./Header.css"
-import logo from "../../assets/Logo Fondo Oscuro.png"
+import logo from "../../assets/LogoByUnoTextil.png"
  import { BoolHook } from "../../hooks/BoolHook.js"
 import { Link } from "react-router-dom"
 import Modal from "../Modal/Modal"
