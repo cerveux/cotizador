@@ -102,7 +102,6 @@ function Cotizar({ resultados, setResultados, elecciones, setElecciones, valores
 
 
         !resultados && setResultados();
-
     }
 
     return (

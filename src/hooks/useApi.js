@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs-react"
 
 
  
-export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
+export function useApi(initialValue = "63963d988eff5cef61ca9be5") { //638407eb2aac88001c4e0ceb
   const [dataBase, setDataBase] = useState(null);
   const [valores, setValores] = useState({
     shablon: [(23), (22)],
@@ -17,15 +17,12 @@ export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
 
   /* https://c8-64-ft-mern-production.up.railway.app/api/login?user=admin&password=admin */
   /* const [url, setUrl] = useState(); */
-  const url = `https://c8-64-ft-mern-production.up.railway.app/api/`;
-  const url2 = "https://app-administrador-tareas-backend.onrender.com/api/";
+  /* const url = `https://c8-64-ft-mern-production.up.railway.app/api/`; */
+  const url = "https://c8-64-ft-mern.onrender.com/api/";
 
-    const fetchValores = () => {
+    const fetchValores = () => {      
 
-      console.log(valores);
-      
-
-      axios.get(`${url2}content/${initialValue}`).then((resp) => {
+      axios.get(`${url}content/${initialValue}`).then((resp) => {
         setValores({
               shablon: [(resp.data.shablon_nuevo + resp.data.shablon_bajada + resp.data.shablon_grabado), (resp.data.shablon_usado + resp.data.shablon_borrado + resp.data.shablon_bajada + resp.data.shablon_grabado)],
               rendimiento: [[resp.data.logo_claro, resp.data.central_claro, resp.data.full_claro], [resp.data.logo_oscuro, resp.data.central_oscuro, resp.data.full_oscuro]],
@@ -86,7 +83,7 @@ export function useApi(initialValue = "638407eb2aac88001c4e0ceb") {
 
     
 
-    axios.patch("https://c8-64-ft-mern-production.up.railway.app/api/updateBase/638407eb2aac88001c4e0ceb", newValue)
+    axios.patch(`${url}/updateBase/${initialValue}`, newValue)
     .then(function (response) {
       console.log(response);
     })

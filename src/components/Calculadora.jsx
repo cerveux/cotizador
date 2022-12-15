@@ -7,7 +7,7 @@ import FondoPrenda from "../components/FondoPrenda/FondoPrenda";
 import Header from "../components/Header/Header";
 import Tamano from "../components/Tamano/Tamano";
 import Tipo from "../components/Tipo/Tipo";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BoolHook } from "../hooks/BoolHook.js";
 import { useApi } from "../hooks/useApi";
 import Footer from "../components/Footer/Footer";
@@ -26,6 +26,13 @@ function Calculadora() {
       cotizacion: 1,
     }
   );
+
+  useEffect(() => {
+    setValores();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  
 
 
   return (
